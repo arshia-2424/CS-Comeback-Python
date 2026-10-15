@@ -50,3 +50,5 @@ if player_deaths > 0:
     print("K/D Ratio:", round(player_kd, 2))
 else:
     print("K/D Ratio: Undefined")
+
+print("GitHub connection test successful!")
