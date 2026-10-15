@@ -1,18 +1,28 @@
 # CS Comeback - Day 3
-# While Loops and For Loops
+# Topics: For, While, Range, Break, Continue, Lists
 
-# Example 1: For loop
-for number in range(1, 6):
-    print("Number:", number)
+# Exercise 1: Numbers from 1 to 10
+for i in range(1, 11):
+    print(i)
 
-# Example 2: While loop
-count = 1
 
-while count <= 5:
-    print("Count:", count)
-    count += 1
+# Exercise 2: Numbers Greater Than 5
+for i in range(1, 11):
+    if i > 5:
+        print(i)
 
-# Example 3: Login with limited attempts
+
+# Exercise 3: Countdown
+count = 10
+
+while count > 0:
+    print(count)
+    count -= 1
+
+print("Countdown finished!")
+
+
+# Exercise 4: Password Attempts
 correct_password = "1234"
 attempts = 3
 
@@ -22,9 +32,29 @@ while attempts > 0:
     if password == correct_password:
         print("Login successful!")
         break
-    else:
-        attempts -= 1
-        print("Incorrect! Attempts left:", attempts)
 
-if attempts == 0:
+    attempts -= 1
+    print("Incorrect! Attempts left:", attempts)
+else:
     print("Account locked!")
+
+
+# Exercise 5: Searching Players
+players = ["XANTARES", "donk", "m0NESY", "NiKo"]
+
+search = input("Search for a player: ").strip()
+
+for player in players:
+    if player.lower() == search.lower():
+        print("Player found:", player)
+        break
+else:
+    print("Player not found!")
+
+
+# Exercise 6: Skip Numbers
+for number in range(1, 11):
+    if number == 5:
+        continue
+
+    print(number)
